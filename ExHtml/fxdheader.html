@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Flexbox Fixed Header</title>
+		<style>
+			body{
+				margin: 0; 
+			}
+			#container{
+				background: #fff;
+			}
+			#header{
+				background: #ccc;
+			}
+			#sidebar{
+				background: #666;
+			}
+			#content{
+				background: #f1f1f1; 
+			}
+
+			html, body, #container{
+				height: 100%;
+				font-family: "Helvetica", sans-serif;
+			}
+			#header{
+				height: 80px;
+			}
+			#main{
+				display: flex;
+				height: calc(100% - 80px); 
+			}
+			#sidebar{
+				overflow-y: auto;
+				height: 100%;
+				min-width: 160px;
+			}
+			#content{
+				height: 100%;
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: row;
+				align-items: flex-start;
+				align-content: flex-start;
+				overflow: auto;
+				justify-content: center;
+			}
+			#header > h1{
+				margin: 0;
+				padding: 0;
+				line-height: 80px;
+				color: #666;		
+			}
+			.card{
+				width: 192px;
+				height: auto;
+				margin: 8px;
+				padding: 16px;
+				background-color: #fff;
+			}
+			ul.navbar{
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+			ul.navbar li{
+				width: 128px;
+				height: 32px;
+				background: #333;
+				margin: 8px auto;
+				text-align: center;
+				line-height: 32px;
+			}
+			ul.navbar li > a{
+				text-decoration: none;
+				color: #f1f1f1;
+				display: block;
+			}
+			ul.navbar li > a:before{
+				content: '#';
+				margin-right: 4px;
+				vertical-align: middle;
+				font-size: 10px;
+			}
+			ul.navbar li > a:hover{
+				background-color: #222;
+			}
+			#showmenu, #hidemenu{
+				display: none;
+				float: right;
+			}
+			@media screen and (max-width: 600px){
+				#sidebar{
+					margin-left: -160px;
+					position: fixed;
+				}
+				#showmenu{
+					display: inline-block;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				<button id="showmenu" onclick="showmenu();">Menu+</button>
+				<button id="hidemenu" onclick="hidemenu();">Menu-</button>
+				<h1>Flexbox</h1>
+			</div>
+  			<div id="main">
+    			<div id="sidebar">
+					<ul class="navbar">
+						<li><a href="#">Menu Item</a></li>
+						<li><a href="#">Menu Item</a></li>
+						<li><a href="#">Menu Item</a></li>
+						<li><a href="#">Menu Item</a></li>
+						<li><a href="#">Menu Item</a></li>
+					</ul>
+    			</div>
+    			<div id="content">
+					<div class="card">
+						<h3>Card Title</h3>
+						<p>This is the content</p>
+					</div>
+					<div class="card">
+						<h3>Card Title</h3>
+						<p>This is the content</p>
+					</div>
+					<div class="card">
+						<h3>Card Title</h3>
+						<p>This is the content</p>
+					</div>
+					<div class="card">
+						<h3>Card Title</h3>
+						<p>This is the content</p>
+					</div>
+					<div class="card">
+						<h3>Card Title</h3>
+						<p>This is the content</p>
+					</div>
+					<div class="card">
+						<h3>Card Title</h3>
+						<p>This is the content</p>
+					</div>
+    			</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var sidebar = document.getElementById("sidebar");
+			function showmenu(){
+				sidebar.style.margin = "0 0 0 0px";
+				document.getElementById("showmenu").style.display = "none";
+				document.getElementById("hidemenu").style.display = "block";
+			}
+			function hidemenu(){
+				sidebar.style.margin = "0 0 0 -160px";
+				document.getElementById("showmenu").style.display = "block";
+				document.getElementById("hidemenu").style.display = "none";			
+			}
+		</script>
+	</body>
+</html>

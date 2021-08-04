@@ -1,0 +1,23 @@
+$item = 'Apple';
+$price = 5;
+print "$item is $price dollars\n";
+print "Updating $item","'s price...\n";
+$price += 2;
+print "$item","'s new price is now $price dollars\n";
+$qty = 10;
+print "Adding $qty $item","'s to the cart...\n";
+$total = $price * $qty;
+print "Purchase total: $total dollars\n";
+$return = 2;
+print "Returning $return $item","s back...\n";
+$qty = $qty - $return;
+print "Recalculating purchase total for $qty $item","s in cart...\n";
+$total = $price * $qty;
+print "Purchase total: $total dollars\n";
+$package = 2;
+print "Packing $qty $item","s in $package packages...\n";
+$perpack = $qty / $package;
+print "$perpack $item","s in $package packages each\n";
+$packprice = $perpack * $price;
+print "Cost of $item", "s in each pack: $packprice dollars\n";
+

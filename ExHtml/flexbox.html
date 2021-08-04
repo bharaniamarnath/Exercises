@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>CSS Flexbox</title>
+		<style>
+			.flex-container{
+				display: flex;
+				flex-wrap: nowrap;
+				background-color: #ff0000;
+			}
+			.flex-container > div{
+				background-color: #fff;
+				color: #333;
+				width: 240px;
+				line-height: 36px;
+				margin: 8px;
+				text-align: center;
+				font-family: "Helvetica", sans-serif;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="flex-container">
+			<div>Div One</div>
+			<div>Div Two</div>
+			<div>Div Three</div>
+			<div>Div Four</div>
+		</div>
+	</body>
+</html>

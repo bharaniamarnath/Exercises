@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>CSS Menu Arrow</title>
+		<style>
+			ul.navmenu{
+				list-style-type: none;
+			}
+			ul.navmenu li{
+				float: left;
+				background-color: #333;
+				width: 100px;
+				height: 35px;
+				border-bottom: 3px solid #ffcc00;
+				position: relative;
+				border-right: 2px solid #eee;
+			}
+			ul.navmenu li:last-child{
+				border-right: none;			
+			}
+			ul.navmenu li > a{
+				text-decoration: none;
+				color: #fff;
+				display: block;
+				line-height: 35px;
+				text-align: center;
+				font-family: "Helvetica", sans-serif;
+				font-size: 12px;
+				font-weight: bold;
+			}
+			span.menuArrow{
+				width: 0;
+				height: 0;
+				position: absolute;
+				border: 7px solid transparent;
+				border-bottom-color: #333;
+				top: 60%;
+				left: 50%;
+				transform: translate(-50%, 0%);
+			}
+			ul.navmenu li:hover{
+				border-bottom-color: #00ffcc;
+			}
+			ul.navmenu li:hover > span.menuArrow{
+				border-bottom-color: #00ffcc;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="navmenu">
+			<li><span class="menuArrow"></span><a href="#">Menu One</a></li>
+			<li><span class="menuArrow"></span><a href="#">Menu Two</a></li>
+			<li><span class="menuArrow"></span><a href="#">Menu Three</a></li>
+			<li><span class="menuArrow"></span><a href="#">Menu Four</a></li>
+		</ul>
+	</body>
+</html>

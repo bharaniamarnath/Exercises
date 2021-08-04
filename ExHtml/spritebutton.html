@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>CSS Sprite Button</title>
+		<style>
+			a.GradientButton span{
+				background: transparent url('resources/btn_sprite_l.png') no-repeat 0 0;
+				display: block;
+				line-height: 30px;
+				color: #fff;
+				padding: 0px 0px 0px 10px;
+			}
+			a.GradientButton{
+				background: transparent url('resources/btn_sprite_r.png') no-repeat top right;
+				display: block;
+				float: left;
+				height: 30px;
+				margin-right: 10px;
+				padding-right: 10px;
+				text-decoration: none;
+				font-size: 12px;
+				font-family: 'Helvetica', sans-serif;	
+				font-weight: bold;		
+			}
+			a.GradientButton:hover span{
+				background-position: 0 -32px;
+				color: #fff;
+			}
+			a.GradientButton:hover{
+				background-position: right -32px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="clearbutton"><a class="GradientButton" href="#"><span>Click Me!</span></a></div>
+		<div class="clearbutton"><a class="GradientButton" href="#"><span>A button with long text!</span></a></div>
+	</body>
+</html>

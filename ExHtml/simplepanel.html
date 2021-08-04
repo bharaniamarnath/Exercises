@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Simple Panel</title>
+    <style>
+      *{
+	margin: 0px auto;
+	padding: 0px;
+	box-sizing: border-box;
+      }
+      body{
+	background-color: #eeeeee;
+      }
+      #container{
+	width: 640px;
+	height: auto;
+	background-color: #ffffff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+      }
+      .textpanel{
+	background-color: #dedede;
+	border: 1px solid #999999;
+	width: 240px;
+	height: auto;
+	margin-bottom: 5px;
+	box-sizing: border-box;
+	padding: 5px 8px;
+	position: relative;
+      }
+      .imgpanel{
+	width: 240px;
+	height: auto;
+      }
+      .imgpanel img{
+	width: 240px;
+	height: auto;
+      }
+      .imgtextpanel{
+	border: 1px solid #999999;
+	box-sizing: border-box;
+      }
+      .textpanel p{
+	color: #333333;
+	font-family: "Helvetica", sans-serif;
+	font-size: 0.9em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="textpanel">
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </div>
+      <div class="textpanel">
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </div>
+      <div class="imgtextpanel">
+	<div class="imgpanel">
+	  <img src="resources/img400x300.jpg" />
+	</div>
+	<div class="textpanel">
+	  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>

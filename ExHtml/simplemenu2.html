@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Menu 1</title>
+    <style>
+      ul.simplemenu{
+	list-style-type: none !important;
+	padding: 0px !important;
+      }
+      ul.simplemenu > li{
+	float: left;
+	background-color: #1A5276;
+	border-right: 2px solid #ffffff;
+      }
+      ul.simplemenu > li:last-child{
+	border-right: none !important;
+      }
+      ul.simplemenu > li:hover{
+	background-color: #154360;
+      }
+      ul.simplemenu > li > a{
+	text-decoration: none !important;
+	font-family: 'Helvetica', sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #ffffff;
+	padding: 8px 13px;
+	display: block;
+      }
+      ul.simplemenu > li > a.current{
+	background-color: #333333 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="simplemenu">
+      <li><a href="#" class="current">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Forum</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </body>
+</html>

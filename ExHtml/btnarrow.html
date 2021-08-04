@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>CSS Button Arrow</title>
+		<style>
+			div.divArrow{
+				width: 200px;
+				height: 40px;
+				background-color: #333;
+				position: relative;
+				margin-bottom: 10px;
+				margin-right: 10px;
+				float: left;
+			}
+			span.spanArrow{
+				width: 0;
+				height: 0;
+				border: 10px solid transparent;
+				border-bottom-color: #333;
+				position: absolute;
+				margin: 0;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, 0%);
+			}
+			span.spanBorder{
+				width: 100%;
+				height: 5px;
+				background-color: #ff0000;
+				position: absolute;
+				margin: 0;
+				top: 100%;
+				left: 50%;
+				transform: translate(-50%, -5px);
+				z-index: 99;
+			}
+			div.divArrow > a{
+				text-decoration: none;
+				display: block;
+				text-align: center;
+				color: #fff;
+				font-family: 'Helvetica', sans-serif;
+				font-weight: bold;
+				font-size: 13px;
+				line-height: 35px;
+			}
+			div.divArrow:hover > span.spanArrow, .active > span.spanArrow{
+				border-bottom-color: #00ff00;
+			}
+			div.divArrow:hover > span.spanBorder, .active > span.spanBorder{
+				background-color: #00ff00;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="divArrow"><span class="spanArrow"></span><span class="spanBorder"></span><a href="#">Div Button 1</a></div>
+		<div class="divArrow active"><span class="spanArrow"></span><span class="spanBorder"></span><a href="#">Div Button 2</a></div>
+		<div class="divArrow"><span class="spanArrow"></span><span class="spanBorder"></span><a href="#">Div Button 3</a></div>
+	</body>
+</html>
